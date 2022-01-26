@@ -1,7 +1,8 @@
 {
     "version": 2,
     "builds": [{
-        "src": "./testpsiapi.py",
+        "src": "/",
+        "dest": "/testpsiapi.py",
         "use": "@vercel/python"
     }]
 }
