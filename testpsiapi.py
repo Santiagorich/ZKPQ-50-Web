@@ -1,11 +1,16 @@
 import flask
-from flask import request
+from flask import render_template, request, send_from_directory
 import tabula
 from flask_cors import CORS
 
 app = flask.Flask(__name__)
 app.config["DEBUG"] = True
 app.config['CORS_HEADERS'] = 'Content-Type'
+
+@app.route('/', methods=['GET'])
+def home():
+    return send_from_directory('','index.html')
+
 
 @app.route('/api/v1/resources/questions', methods=['GET'])
 def getquestions():
@@ -17,6 +22,7 @@ def getquestions():
             text += line.strip()+"\n"
             counter+=1
     return text
+
 @app.route('/api/v1/resources/test', methods=['POST'])
 def test():
 
