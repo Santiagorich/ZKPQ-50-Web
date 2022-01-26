@@ -9,7 +9,7 @@ app.config['CORS_HEADERS'] = 'Content-Type'
 
 @app.route('/', methods=['GET'])
 def home():
-    return send_from_directory('','index.html')
+    return send_from_directory('','/static/index.html')
 
 
 @app.route('/api/v1/resources/questions', methods=['GET'])
