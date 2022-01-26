@@ -1,5 +1,5 @@
 import flask
-from flask import render_template, request, send_from_directory
+from flask import request, send_from_directory
 import tabula
 from flask_cors import CORS
 
