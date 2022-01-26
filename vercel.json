@@ -3,5 +3,9 @@
     "builds": [{
         "src": "./testpsiapi.py",
         "use": "@vercel/python"
+    }],
+    "routes": [{
+        "src": "/index.html",
+        "dest": "/"
     }]
 }
