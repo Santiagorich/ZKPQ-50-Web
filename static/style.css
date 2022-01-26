@@ -1,0 +1,117 @@
+body{
+    background-color: white;
+}
+
+#header{
+    font-size: 3vh;
+    color: white;
+}
+
+.start{
+    position: absolute;
+    bottom: 25vh;
+    
+}
+
+.bold{
+    font-weight: bold;
+    
+}
+
+.spec{
+    font-weight: bold;
+    color: orangered;
+}
+
+.resultado{
+    font-weight: bold;
+    color: rgb(111, 111, 247);
+}
+
+#resultados{
+    width: 100%;
+    padding-bottom: 10vh;
+}
+
+.vb{
+    position: absolute;
+    bottom: 30vh;
+    left: 15vw;
+    width: 25vw;
+    background-color: rgb(32, 202, 32);
+}
+
+.fb{
+    position: absolute;
+    bottom: 30vh;
+    right: 15vw;
+    width: 25vw;
+    background-color:rgb(228, 53, 53);
+}
+
+.fb:hover{
+    background-color:rgb(177, 40, 40);
+}
+
+.vb:hover{
+    background-color: rgb(28, 156, 28);
+}
+
+#counter{
+    position: absolute;
+    top: 12vh;
+    font-weight: bold;
+}
+
+
+.hidden{
+visibility: hidden;
+}
+
+#container{
+    height: 65vh;
+    width: 80vw;
+    border-radius: 20px;
+    margin-top: 20vh;
+}
+
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='blue' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e");
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='blue' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3e%3c/svg%3e");
+}
+
+
+#description{
+    
+    margin: 5vh 10vh 0 10vh;
+}
+
+.incorrect{
+    border-color: red;
+}
+
+.campo{
+    width:7%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#edad{
+    margin: 0 auto;
+    width:3%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.datos{
+    margin-top: 1vh;
+    font-weight: bold;
+
+}
