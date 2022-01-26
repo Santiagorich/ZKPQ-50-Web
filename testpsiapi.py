@@ -1,9 +1,6 @@
-from platform import python_branch
 import flask
-from flask import request, jsonify,render_template
-import os
+from flask import request
 import tabula
-import gunicorn
 from flask_cors import CORS
 
 app = flask.Flask(__name__)
@@ -90,12 +87,6 @@ def test():
         elif (falso in aggf):
             aggsum+=1
     
-    #results += ("<p>Neuroticismo ansiedad (N-Anx): "+ str(nansum) + "</p>")
-    #results += ("<p>Impulsividad-Búsqueda de sensaciones (ImpSS): "+ str(impsssum) + "</p>")
-    #results += ("<p>Actividad (Act): "+ str(actsum) + "</p>")
-    #results += ("<p>Sociabilidad (Sy): "+ str(sysum) + "</p>")
-    #results += ("<p>Agresividad-Hostilidad (AggHost): "+ str(aggsum) + "</p>")
-
     results += f'''
     <table class="table">
   <thead>
@@ -128,12 +119,6 @@ def test():
   </tbody>
 </table>
     '''
-    #results += ("<p class='resultado'>Neuroticismo ansiedad (N-Anx): "+ str(nansum) + "<span class='spec'>El %s de los %s es menos ansioso que tu</span></p>" % (df[tablenumber].loc[rowoffset - nansum][1 + offset],sexo))
-    #results += ("<p class='resultado'>Impulsividad-Búsqueda de sensaciones (ImpSS): "+ str(impsssum) + "<span class='spec'>El %s de los %s es menos impulsivo que tu</span></p>" % (df[tablenumber].loc[rowoffset - impsssum][2 + offset],sexo))
-    #results += ("<p class='resultado'>Actividad (Act): "+ str(actsum) + "<span class='spec'>El %s de los %s es menos activo que tu</span></p>" % (df[tablenumber].loc[rowoffset - actsum][3 + offset],sexo))
-    #results += ("<p class='resultado'>Sociabilidad (Sy): "+ str(sysum) + "<span class='spec'>El %s de los %s es menos sociable que tu</span></p>" % (df[tablenumber].loc[rowoffset - sysum][4 + offset],sexo))
-    #results += ("<p class='resultado'>Agresividad-Hostilidad (AggHost): "+ str(aggsum) + "<span class='spec'>El %s de los %s es menos agresivo que tu</span></p>" % (df[tablenumber].loc[rowoffset - aggsum][5 + offset],sexo))
-
     return results
 
 CORS(app)
